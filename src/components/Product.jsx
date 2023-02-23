@@ -1,8 +1,15 @@
 import React from 'react'
 
-function Product() {
+function Product({product}) {
+  const {image, name, price} = product
   return (
-    <div>Product</div>
+    <div>
+      <div>
+        <img src={image} alt={name}/>
+      </div>
+      <p>{name}</p>
+      <p>{price}</p>
+    </div>
   )
 }
 

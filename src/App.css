@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --text-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+  --header-color: #fff;
+  --body-color: hsl(48, 14%, 93%);
+  --black-color: hsl(0, 0%, 0%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input {
+  font-family: var(--body-font);
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===============-REUSABLE CSSS CLASSES-=========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section {
+  padding: 4.5rem 0rem 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+/* ===========================HEADER=========================  */
+.header {
+  background-color: var(--header-color);
+  padding: 1rem 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav__menu-item {
+  cursor: pointer;
 }
