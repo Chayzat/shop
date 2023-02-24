@@ -8,9 +8,7 @@ function CartProvider({ children }) {
     const newItem = { ...product, amount: 1 };
     const cartItem = cart.find((item) => item.id === id);
     if (cartItem) {
-      const newCart = [...cart].map((item) =>
-        item.id === id ? { ...item, amount: cartItem.amount + 1 } : item
-      );
+      const newCart = [...cart].map((item) => item.id === id ? { ...item, amount: cartItem.amount + 1 } : item)
       setCart(newCart);
     } else {
       setCart([...cart, newItem]);

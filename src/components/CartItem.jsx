@@ -1,12 +1,15 @@
 import React from 'react'
 
-function CartItem() {
-  // const {id, name, description, price, image} = item
+function CartItem({item}) {
+  const {id, name, description, price, image} = item
+  console.log('item from cartitem',item)
   return (
     <div className='content__cart'>
-      {/* {name} */}
       <div className='content__cart-img'>
-        <img/>
+        <img src={image} alt={name}/>
+      </div>
+      <div className='content__cart-text'>
+        {name}
       </div>
     </div>
   )

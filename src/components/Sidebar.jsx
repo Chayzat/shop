@@ -5,6 +5,7 @@ import CartItem from './CartItem'
 
 function Sidebar() {
   const {cart} = useContext(CartContext)
+  console.log('from sidebar',cart)
   return (
     <section className='sidebar'>
       <div className='sidebar__container'>
@@ -15,7 +16,10 @@ function Sidebar() {
           </div>
         </div>
         <div className='sidebar__content'>
-          <CartItem/>
+          {
+            cart.map(item => {
+            return <CartItem item={item} key={item.id} />})
+          }
         </div>
         <div className='sidebar__footer'>footer</div>
       </div>

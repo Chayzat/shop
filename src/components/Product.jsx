@@ -14,11 +14,7 @@ function Product({ product }) {
         </div>
         <div className="content__btns">
           <button
-            onClick={() => {
-              console.log(`added: ${product.name}`)
-              addToCart(product, id)
-            }
-          }
+            onClick={() => addToCart(product, id)}
             className="content__btn"
           >
             <AiOutlinePlus />
