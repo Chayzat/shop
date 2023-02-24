@@ -2,7 +2,6 @@ import React from 'react'
 
 function CartItem({item}) {
   const {id, name, description, price, image} = item
-  console.log('item from cartitem',item)
   return (
     <div className='content__cart'>
       <div className='content__cart-img'>

@@ -137,6 +137,9 @@ img {
     right: 0;
     height: 100vh;
 }
+.isOpen {
+  top: 0;
+}
 .sidebar__header {
   display: flex;
   padding-top: 1rem;
