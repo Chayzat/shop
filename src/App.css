@@ -6,6 +6,7 @@
   --text-color: hsl(0, 0%, 0%);
   --white-color: hsl(0, 0%, 100%);
   --header-color: #fff;
+  --sidebar-color: #fcfcfc;
   --body-color: hsl(48, 14%, 93%);
   --black-color: hsl(0, 0%, 0%);
 
@@ -57,8 +58,8 @@ img {
   font-size: 2rem;
 }
 .grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 /* ===========================HEADER=========================  */
 .header {
@@ -68,4 +69,81 @@ img {
 
 .nav__menu-item {
   cursor: pointer;
+}
+
+/* ===========================HOME=========================  */
+.home__products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.95rem;
+}
+
+/* ===========================PRODUCTS=========================  */
+.product__cart {
+  /* border: 1px solid var(--black-color); */
+  padding: 1rem;
+}
+.product__cart-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.content__img {
+  padding-bottom: 1rem;
+
+}
+.content__img img {
+  width: 225px;
+  height: 225px;
+  border: 1px solid var(--black-color);
+}
+.content__btn {
+  position: absolute;
+  top: 26%;
+  opacity: 0;
+  left: 35%;
+  display: flex;
+    background: var(--white-color);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    cursor: pointer;
+
+}
+.content__btn:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.content__text-name {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.content__text-price {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+/* ===========================SIDEBAR=========================  */
+.sidebar {
+  background-color: var(--sidebar-color);
+  padding: 0 35px;
+    width: 35vw;
+    position: fixed;
+    top: -100%;
+    right: 0;
+    height: 100vh;
+}
+.sidebar__header {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
